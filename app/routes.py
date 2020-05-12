@@ -4,9 +4,6 @@ from app.forms import SearchForm, SearchForm1
 
 import os, json, random
 
-from sqlalchemy import or_, and_
-
-import pandas as pd
 import numpy as np
 
 common_title = "skeleton_website"
