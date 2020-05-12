@@ -1,0 +1,28 @@
+.centre{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}
+.margin_custom {
+	margin-top: 120px;
+	margin-bottom: 10px;
+	margin-right: -50px;
+	margin-left: -50px;
+}
+
+.navbar-toggler {
+    background-color: rgba(85,156,173,1);
+}
+
+.tooltip-inner {
+    background: grey;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.bs-tooltip-auto[x-placement^=top] .arrow::before, .bs-tooltip-top .arrow::before {
+    border-top-color:grey !important;
+}

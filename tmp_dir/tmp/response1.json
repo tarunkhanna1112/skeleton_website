@@ -1,0 +1,42 @@
+{
+    "data": [], 
+    "filters": {
+      "intervention": {
+        "behavioral": 141, 
+        "biological": 117, 
+        "device": 146, 
+        "diagnostic test": 70, 
+        "dietary supplement": 25
+      }, 
+      "study_type": {
+        "expanded access": 11, 
+        "interventional": 1509, 
+        "observational": 336, 
+        "observational [patient registry]": 52
+      }
+    },
+    "meta": {
+      "filter_size": 10, 
+      "filters": {
+        "intervention": {
+          "first_page":0, 
+          "last_page": 0, 
+          "pageid": [
+            "", 
+            "procedure"
+          ]
+        }, 
+        "study_type": {
+          "first_page": 1, 
+          "last_page": 1, 
+          "pageid": [
+            ""
+          ]
+        }
+      },
+      "from": 0, 
+      "session": "f9d0cc83-faf9-4bcf-8ea2-1e3aff6d3131", 
+      "size": 0, 
+      "total": 1908
+    }
+  }

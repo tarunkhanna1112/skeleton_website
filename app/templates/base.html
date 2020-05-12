@@ -1,0 +1,59 @@
+<!DOCTYPE html5>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		
+		<title>{{ title }} </title>
+
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/bootstrap.min.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/centre.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/pythonforms.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/custom_jquery_table.css') }}">
+
+		<script src="/static/js/jquery.min.js"></script>
+		<script src="/static/js/popper.min.js"></script>
+		<script src="/static/js/bootstrap.min.js"></script>
+		<script src="/static/js/jquery.dataTables.min.js"></script>
+
+	</head>
+		<body">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<div class="container" style="padding-top: 10px; padding-bottom: 10px;">
+					<!--
+					<a href="/home"> <img class="ml-0" src="static/img/missense3d-logo-3.png" alt="" width="186" height="48" >
+					</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="myNavbar">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item active">
+								<a class="nav-link"  href="/home">Home <span class="sr-only">(current)</span> 
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/documentation">Documentation</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/dataset" >Dataset</a>
+							</li>
+							<li class="nav-item">
+									<a class="nav-link" href="/contact" >Contact</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="http://www.sbg.bio.ic.ac.uk/~missense3d/" target="_blank" rel="noopener noreferrer">Missense3D Webserver</a>
+							</li>
+						</ul>
+					</div>
+				-->
+				</div>
+			</nav>
+			<div class="jumbotron"
+			style="background-color:white">
+				{% block content %}{% endblock %}
+			</div>
+		</body>
+</html>

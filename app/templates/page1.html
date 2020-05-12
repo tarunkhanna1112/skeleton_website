@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container" style="background-color: rgb(243, 243, 243); padding-bottom: 50px; padding-left: 50px; padding-top: 50px; padding-right: 50px;">
+		
+		<h1 style="color: rgba(85,156,173,1);">Filters</h1>
+
+		<div style="font-size: small; padding-top: 10px; padding-bottom: 10px; text-align: left;">
+			{% for key1 in data.keys() %}
+				<h4>{{ key1 }}</h4>
+				{% for key2 in data[key1].keys() %}
+					<input type="checkbox" name="col9"> {{ key2 }} ({{ data[key1][key2] }}) <br>
+				{% endfor %}
+				<br>
+				
+				<form action="" method="post" novalidate autocomplete="off">
+					{% if meta_data[key1]["first_page"] != 1 %}
+						{{ form.submit2() }}
+					{% endif %}
+					{% if meta_data[key1]["last_page"] != 1 %}
+						{{ form.submit3() }}	
+					{% endif %}
+				</form>
+
+			{% endfor %}
+		</div>
+</div>
+
+<script>
+	var table = $('#dtBasicExample').DataTable(
+		{"pageLength": 25 }
+	);
+
+	$("input:checkbox:not(:checked)").each(function() {
+		table.page.len(-1).draw();
+		var column = $('#dtBasicExample').find("." + $(this).attr("name"));
+		$(column).hide();
+		table.page.len(25).draw();
+	});
+
+	$("input:checkbox").click(function(){
+		table.page.len(-1).draw();
+		var column = $('#dtBasicExample').find("." + $(this).attr("name"));
+		$(column).toggle();
+		table.page.len(25).draw();
+	});
+</script>
+
+<script type="text/javascript">
+	$(function () {
+  		$('[data-toggle="tooltip"]').tooltip()
+	})
+</script>
+
+{% endblock %}
